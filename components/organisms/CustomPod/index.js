@@ -4,10 +4,10 @@ import Pod from 'carbon-react/lib/components/pod';
 import PodManager from 'carbon-react/lib/components/pod/pod-manager.component';
 import Button from 'carbon-react/lib/components/button';
 
-import Title from '../../molecules/Title';
-import Subtitle from '../../molecules/Subtitle';
-import Links from '../../molecules/Links';
-import Amount from '../../molecules/Amount';
+import Title from 'components/molecules/Title';
+import Subtitle from 'components/molecules/Subtitle';
+import Links from 'components/molecules/Links';
+import Amount from 'components/molecules/Amount';
 
 const CustomPod = ({ task }) => {
   const { title, subtitle, links, amount } = task;

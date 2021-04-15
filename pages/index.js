@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import mintTheme from 'carbon-react/lib/style/themes/mint';
 import AppWrapper from 'carbon-react/lib/components/app-wrapper';
-import CustomPod from '../components/organisms/CustomPod';
+import CustomPod from 'components/organisms/CustomPod';
 
 export default function Home() {
   const [tasks, setTasks] = useState([]);
