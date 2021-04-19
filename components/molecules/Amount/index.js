@@ -3,7 +3,7 @@ import Typography from 'carbon-react/lib/components/typography';
 const Amount = ({ currency, amount }) => {
   const formatted_currency = new Intl.NumberFormat('en-EN', {
     style: 'currency',
-    currency: currency,
+    currency: currency ?? 'USD',
   }).format(amount);
   return (
     <>

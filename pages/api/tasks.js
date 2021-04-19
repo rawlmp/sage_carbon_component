@@ -16,8 +16,8 @@ const getTasks = (req, res) => {
         files: [1, 2, 3, 4],
       },
       amount: {
-        currency: 'GBP',
-        amount: 4500,
+        currency: 'EUR',
+        amount: 2345,
       },
     },
     {
@@ -51,6 +51,21 @@ const getTasks = (req, res) => {
         comments: [1, 2, 3],
         files: [1, 2],
       },
+      amount: {
+        currency: 'USD',
+        amount: 4500,
+      },
+    },
+    {
+      title: {
+        text: '15 August 2022 to 30 September 2022',
+      },
+      subtitle: {
+        text: 'Due in 35 days on 08 January 2022',
+        icon: null,
+        author: null,
+      },
+      links: {},
       amount: {
         currency: 'GBP',
         amount: 4500,

@@ -5,9 +5,9 @@ const Subtitle = ({ icon, subtitle, author }) => {
   return (
     <>
       <Typography variant="small" display="flex" pb="1">
-        <Icon type={icon} color="blackOpacity55" />
+        <Icon type={icon ?? 'calendar'} color="blackOpacity55" />
         <Typography lineHeight="24px" color="blackOpacity55" variant="p">
-          {subtitle} · Started by {author}
+          {subtitle} · {author ? `Started by ${author}` : 'Anonymous starter'}
         </Typography>
       </Typography>
     </>

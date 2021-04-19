@@ -4,17 +4,20 @@ import Pod from 'carbon-react/lib/components/pod';
 import PodManager from 'carbon-react/lib/components/pod/pod-manager.component';
 import Button from 'carbon-react/lib/components/button';
 
-import Title from 'components/molecules/Title';
-import Subtitle from 'components/molecules/Subtitle';
-import Links from 'components/molecules/Links';
-import Amount from 'components/molecules/Amount';
+import Title from '../../molecules/Title';
+import Subtitle from '../../molecules/Subtitle';
+import Links from '../../molecules/Links';
+import Amount from '../../molecules/Amount';
 
 const CustomPod = ({ task }) => {
   const { title, subtitle, links, amount } = task;
   const { text: title_text } = title;
   const { text: subtitle_text, icon, author } = subtitle;
-  const { comments, files } = links;
   const { currency, amount: total_amount } = amount;
+
+  const handleClick = () => {
+    console.info('Click');
+  };
 
   return (
     <Pod padding="none" style={{ marginBottom: '10px' }}>
@@ -30,7 +33,7 @@ const CustomPod = ({ task }) => {
           >
             <Title title={title_text} />
             <Subtitle icon={icon} subtitle={subtitle_text} author={author} />
-            <Links comments={comments} files={files} />
+            <Links {...links} />
           </GridItem>
           <GridItem
             gridColumn="9 / 11"
@@ -45,7 +48,10 @@ const CustomPod = ({ task }) => {
             alignSelf="center"
             justifySelf="center"
           >
-            <Button buttonType="primary"> Continue </Button>
+            <Button buttonType="primary" onClick={() => handleClick()}>
+              {' '}
+              Continue{' '}
+            </Button>
           </GridItem>
           <GridItem
             gridColumn="12 / 13"
