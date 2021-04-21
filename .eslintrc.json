@@ -1,6 +1,9 @@
 {
   "env": {
-    "jest": true
+    "jest": true,
+    "test": true,
+    "expect": true,
+    "fetch": true
   },
   "rules": {
     "beforeStatementContinuationChars": "never"
